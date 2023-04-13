@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-color: darkblue;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr 800px 1fr;
+    grid-template-columns: 1fr 800px 1fr;
+
+}
+
+.chessboard {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: brown;
+    display: flex;
+    flex-wrap: wrap;
+}
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.knight-piece {
+    object-fit: scale-down;
+    padding: 5px;
+}
+
+.row-position {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2 / 3;
+}
+
+.row {
+    display: flex;
+    font-size: xx-large;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    padding-right: 5px;
+}
+
+.column-position {
+    display: flex;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;  
+    
+}
+
+.column {
+    display: flex;
+    font-size: xx-large;
+    justify-content: center;
+    color: white;
+    padding-top: 5px;
+
+}
+
+.form-panel {
+    display: flex;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    flex-direction: column;
+    place-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+label {
+    display: flex;
+    height: 50px;
+    font-size: x-large;
+    color: white;
+}
+
+input[type='text'] {
+    appearance: none;
+    height: 2rem;
+    font-size: xx-large;
+    width: 4rem;
+    background-color: lightgreen;
+}
+
+button {
+    height: 3rem;
+    font-size: large;
+}
+
+#reset {
+   
+}
+
+.result {
+    border: 1px solid yellow;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    margin-top: 1rem;
+    height: auto;
+}
+input:invalid {
+    border-color: #900;
+    background-color: white;
+}
+  
+input:focus:invalid {
+    outline: none;
+}
+  
+.error {
+    width: 100%;
+    padding: 0;
+    height: 2rem;
+    font-size: 15px;
+    color: red;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+ }
+  
+.error.active {
+    padding: 0.3em;
+}

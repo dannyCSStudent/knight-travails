@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knights Travails</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row-position">
+            <div class="row">8</div>
+            <div class="row">7</div>
+            <div class="row">6</div>
+            <div class="row">5</div>
+            <div class="row">4</div>
+            <div class="row">3</div>
+            <div class="row">2</div>
+            <div class="row">1</div>
+            
+        </div>
+        <div class="chessboard">
+            
+        </div>
+        <div class="column-position">
+            <div class="column">a</div>
+            <div class="column">b</div>
+            <div class="column">c</div>
+            <div class="column">d</div>
+            <div class="column">e</div>
+            <div class="column">f</div>
+            <div class="column">g</div>
+            <div class="column">h</div>
+        </div>
+        <div class="form-panel">
+            <form novalidate>
+                <label for="start">
+                    <span>From : </span>
+                    <input type="text" id="start" pattern="^[A-Ha-h][1-8]$" name="start" required maxlength="2">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+                <label for="end">
+                    <span>To : </span>
+                    <input type="text" id="end" pattern="^[A-Ha-h][1-8]$" name="end" required minlength="2" maxlength="2">
+                    <span class="error" aria-live="polite"></span>
+                </label>
+                <button id="move">Move</button>
+                <div class="result">
+                </div>
+            </form>
+            <button id="reset">Reset</button>
+        </div>
+        
+        
+    </div>
+    <script src="bundle.js"></script>
+</body>
+</html>
